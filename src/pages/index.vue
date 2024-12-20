@@ -1,20 +1,20 @@
 <template>
     <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <main class="max-w-3xl mx-auto ">
-            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度优秀设计企业</div>
+            <!-- <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white z-2">2024年度优秀设计企业</div> -->
             <FileCard :requiredQuestions="requiredQuestions" />
 
-            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度优秀生产企业</div>
-            <FileCard :requiredQuestions="requiredQuestions" />
+            <!-- <div class="sticky top-0 text-lg font-semibold px-4 py-4 mt-8 flex items-center justify-between bg-white z-2">2024年度优秀生产企业</div> -->
+            <!-- <FileCard :requiredQuestions="requiredQuestions" /> -->
 
-            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度工程实施杰出企业</div>
-            <FileCard :requiredQuestions="requiredQuestions" />
+            <!-- <div class="sticky top-0 text-lg font-semibold px-4 py-4 mt-8 flex items-center justify-between bg-white z-2">2024年度工程实施杰出企业</div> -->
+            <!-- <FileCard :requiredQuestions="requiredQuestions" /> -->
 
-            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度卓越营销企业</div>
-            <FileCard :requiredQuestions="requiredQuestions" />
+            <!-- <div class="sticky top-0 text-lg font-semibold px-4 py-4 mt-8 flex items-center justify-between bg-white z-2">2024年度卓越营销企业</div> -->
+            <!-- <FileCard :requiredQuestions="requiredQuestions" /> -->
 
-            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度跨境先锋企业</div>
-            <FileCard :requiredQuestions="requiredQuestions" />
+            <!-- <div class="sticky top-0 text-lg font-semibold px-4 py-4 mt-8 flex items-center justify-between bg-white z-2">2024年度跨境先锋企业</div> -->
+            <!-- <FileCard :requiredQuestions="requiredQuestions" /> -->
 
 
 
