@@ -1,14 +1,15 @@
 <template>
-    <SurveyForm />
-  </template>
+    <router-view></router-view>
+</template>
   
-  <script>
-  import SurveyForm from './pages/index.vue'
+<script>
+import {RouterLink,RouterView} from "vue-router"
+import SurveyHome from './pages/index.vue'
   
-  export default {
+export default {
     name: 'App',
     components: {
-      SurveyForm
+        SurveyHome
     }
-  }
-  </script>
+}
+</script>

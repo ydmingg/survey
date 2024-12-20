@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onUnmounted } from 'vue'
 import { ArrowLeftIcon } from 'lucide-vue-next'
 
 const currentTime = ref(new Date().toLocaleTimeString('zh-CN', {
@@ -29,9 +29,11 @@ const onBack = () => {
     <header class="bg-white shadow-sm fixed top-0 w-full z-10">
       <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
-          <button @click="onBack" class="text-gray-600 hover:text-gray-900">
-            <ArrowLeftIcon class="h-5 w-5" />
-          </button>
+          <router-link class="flex items-center" to="/">
+            <button @click="onBack" class="text-gray-600 hover:text-gray-900">
+                <ArrowLeftIcon class="h-5 w-5" />
+            </button>
+          </router-link>
           <h1 class="text-lg font-semibold">2024年度优秀单位评选</h1>
         </div>
         <div class="text-sm text-gray-500">{{ currentTime }}</div>
