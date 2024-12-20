@@ -34,7 +34,7 @@ const onBack = () => {
                 <ArrowLeftIcon class="h-5 w-5" />
             </button>
           </router-link>
-          <h1 class="text-lg font-semibold">2024年度优秀单位评选</h1>
+          <h1 class="text-lg font-semibold">首页-评选单位</h1>
         </div>
         <div class="text-sm text-gray-500">{{ currentTime }}</div>
       </div>

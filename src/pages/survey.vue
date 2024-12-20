@@ -12,9 +12,9 @@
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
             <div class="text-white">
-              <h2 class="text-2xl font-bold mb-2">2024 年度评选</h2>
+              <h2 class="text-2xl font-bold mb-2">深标协2024年度会员单位评选颁奖活动</h2>
               <p class="text-sm opacity-90">
-                协会将组织开展2024年度奖项评选工作，诚邀您参与评分
+                深圳市力创美广告有限公司
               </p>
             </div>
           </div>
@@ -128,7 +128,7 @@ import { ref } from 'vue'
 import Header from '@/components/Header.vue'
 import Dialog from '@/components/Dialog.vue'
 // 引入图片
-const placeholder = new URL('@/assets/img/placeholder.svg', import.meta.url).href
+const placeholder = new URL('@/assets/img/survey-bg.png', import.meta.url).href
 
 
 // 必填项数据
