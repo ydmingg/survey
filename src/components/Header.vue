@@ -2,27 +2,22 @@
 import { ref, onUnmounted } from 'vue'
 import { ArrowLeftIcon } from 'lucide-vue-next'
 
-const currentTime = ref(new Date().toLocaleTimeString('zh-CN', {
-    hour: '2-digit',
-    minute: '2-digit'
-}))
+// const currentTime = ref(new Date().toLocaleTimeString('zh-CN', {
+//     hour: '2-digit',
+//     minute: '2-digit'
+// }))
 
-const timeInterval = setInterval(() => {
-    currentTime.value = new Date().toLocaleTimeString('zh-CN', {
-        hour: '2-digit',
-        minute: '2-digit'
-    })
-}, 1000)
+// const timeInterval = setInterval(() => {
+//     currentTime.value = new Date().toLocaleTimeString('zh-CN', {
+//         hour: '2-digit',
+//         minute: '2-digit'
+//     })
+// }, 1000)
 
-onUnmounted(() => {
-    clearInterval(timeInterval)
-})
+// onUnmounted(() => {
+//     clearInterval(timeInterval)
+// })
 
-const emit = defineEmits(['back'])
-
-const onBack = () => {
-    emit('back')
-}
 </script>
 
 <template>
@@ -30,7 +25,7 @@ const onBack = () => {
       <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
         <div class="flex items-center space-x-2">
           <router-link class="flex items-center" to="/">
-            <button @click="onBack" class="text-gray-600 hover:text-gray-900">
+            <button class="text-gray-600 hover:text-gray-900">
                 <ArrowLeftIcon class="h-5 w-5" />
             </button>
           </router-link>

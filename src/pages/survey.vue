@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Header @back="goBack" />
+      <Header />
       
       <main class="max-w-3xl mx-auto px-4 pt-20 pb-16">
         <!-- 封面 -->
@@ -149,6 +149,7 @@ const optionalQuestions = ref([
     { id: 4, title: '3. 其他加分项', rating: null },
 ])
 
+
 // 表单状态
 const comments = ref('')
 const isSubmitting = ref(false)
@@ -166,11 +167,6 @@ const setRating = (questionId, rating) => {
     if (question) {
         question.rating = rating
     }
-}
-
-// 页面返回
-const goBack = () => {
-    console.log('Going back...')
 }
 
 // 显示弹窗
