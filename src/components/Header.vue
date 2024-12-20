@@ -36,7 +36,7 @@ const onBack = () => {
           </router-link>
           <h1 class="text-lg font-semibold">首页-评选单位</h1>
         </div>
-        <div class="text-sm text-gray-500">{{ currentTime }}</div>
+        <!-- <div class="text-sm text-gray-500">{{ currentTime }}</div> -->
       </div>
     </header>
 </template>

@@ -1,26 +1,31 @@
 <template>
     <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-        <main class="max-w-3xl mx-auto px-4 pt-4 pb-16">
-            <!-- <div class="relative rounded-xl overflow-hidden mb-8 shadow-lg">fd</div> -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <div v-for="(question, index) in requiredQuestions" :key="index" class="bg-white rounded-xl shadow-sm p-3">
-                    <router-link :to="{ name: 'Survey', params: { title: question.title } }">
-                        <div class="flex flex-col items-start justify-center gap-2">
-                            <img :src="question.img" class="w-full rounded-lg" alt="">
-                            <p class="w-full text-md font-medium text-center">{{ question.title }}</p>
-                        </div>
-                    </router-link>
-                </div>
+        <main class="max-w-3xl mx-auto ">
+            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度优秀设计企业</div>
+            <FileCard :requiredQuestions="requiredQuestions" />
 
-            </div>
+            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度优秀生产企业</div>
+            <FileCard :requiredQuestions="requiredQuestions" />
+
+            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度工程实施杰出企业</div>
+            <FileCard :requiredQuestions="requiredQuestions" />
+
+            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度卓越营销企业</div>
+            <FileCard :requiredQuestions="requiredQuestions" />
+
+            <div class="sticky top-0 text-lg font-semibold px-4 py-4 flex items-center justify-between bg-white">2024年度跨境先锋企业</div>
+            <FileCard :requiredQuestions="requiredQuestions" />
+
+
+
         </main>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-// import SurveyForm from './pages/survey.vue'
-const placeholder = new URL('@/assets/img/placeholder.svg', import.meta.url).href;
+import FileCard from '@/components/FileCard.vue'
+
 const logoArr = [
     "http://50001056.s21i.huaweicloudsite.cn/4/ABUIABAEGAAgr-GupQYomq_5rAMw3gE4eg!300x300.png.webp",
     "http://50001056.s21i.huaweicloudsite.cn/4/ABUIABAEGAAgr-GupQYo0J-oxAEw3gE4eg.png.webp",
@@ -40,14 +45,6 @@ const requiredQuestions = ref([
     { id: 6, title: '深圳市琢典标识有限公司', rating: null, img: logoArr[5] },
     { id: 7, title: '深圳字工场发光字工程有限公司', rating: null, img: logoArr[6] },
 ])
-
-// const setRating = (questionId, rating) => {
-//     const allQuestions = [...requiredQuestions.value]
-//     const question = allQuestions.find(q => q.id === questionId)
-//     if (question) {
-//         question.rating = rating
-//     }
-// }
 
   
 </script>
