@@ -4,7 +4,7 @@
             <!-- <div class="relative rounded-xl overflow-hidden mb-8 shadow-lg">fd</div> -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 <div v-for="(question, index) in requiredQuestions" :key="index" class="bg-white rounded-xl shadow-sm p-3">
-                    <router-link to="survey">
+                    <router-link :to="{ name: 'Survey', params: { title: question.title } }">
                         <div class="flex flex-col items-start justify-center gap-2">
                             <img :src="question.img" class="w-full rounded-lg" alt="">
                             <p class="w-full text-md font-medium text-center">{{ question.title }}</p>

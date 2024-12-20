@@ -14,7 +14,7 @@
             <div class="text-white">
               <h2 class="text-2xl font-bold mb-2">深标协2024年度会员单位评选颁奖活动</h2>
               <p class="text-sm opacity-90">
-                深圳市力创美广告有限公司
+                {{title}}
               </p>
             </div>
           </div>
@@ -124,11 +124,19 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
+import { ref  } from 'vue'
 import Header from '@/components/Header.vue'
 import Dialog from '@/components/Dialog.vue'
+import { useRoute } from 'vue-router';
+
 // 引入图片
 const placeholder = new URL('@/assets/img/survey-bg.png', import.meta.url).href
+
+
+// 获取路由参数
+const route = useRoute()
+const title = route.params.title
+
 
 
 // 必填项数据
