@@ -3,8 +3,7 @@
 </template>
   
 <script>
-import {RouterLink,RouterView} from "vue-router"
-import SurveyHome from './pages/index.vue'
+import SurveyHome from './pages/home.vue'
   
 export default {
     name: 'App',

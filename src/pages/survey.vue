@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div class="min-h-screen bg-gradient-to-b from-green-50 to-green">
       <Header />
       
       <main class="max-w-3xl mx-auto px-4 pt-20 pb-16">
@@ -33,31 +33,31 @@
                 <span>非常不满意</span>
                 <span>非常满意</span>
               </div> -->
-              <div class="flex flex-wrap gap-3">
+              <div class="grid grid-cols-5 gap-4 lg:grid-cols-10 lg:gap-3">
                 <div 
-                  v-for="n in 11" 
-                  :key="n - 1"
+                  v-for="n in 10" 
+                  :key="n"
                   class="flex justify-center items-center"
                 >
                   <button 
                   type="button"
-                  @click="setRating(question.id, n - 1)"
+                  @click="setRating(question.id, n)"
                   :class="[
                     'w-10 h-10 rounded-full text-sm font-medium transition-all duration-200',
-                    question.rating === n - 1
-                        ? 'bg-blue-500 text-white transform scale-110'
+                    question.rating === n
+                        ? 'bg-green-500 text-white transform scale-110'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 ]"
-                  >{{ n - 1 }}</button>
+                  >{{ n }}</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-lg shadow-sm p-6">
+          <!-- <div class="bg-white rounded-lg shadow-sm p-6">
             <div class="flex items-start gap-2">
               <h3 class="text-lg font-medium mb-4">2. 参与活动情况</h3>
-              <!-- <span class="text-gray-400">(选填)</span> -->
+              <span class="text-gray-400">(选填)</span>
               <span class="text-red-500">*</span>
             </div>
             <textarea
@@ -66,45 +66,41 @@
               class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="请输入您的意见或建议..."
             ></textarea>
-          </div>
+          </div> -->
   
-          <div v-for="(question, index) in optionalQuestions" :key="index" class="bg-white rounded-lg shadow-sm p-6">
+          <!-- <div v-for="(question, index) in optionalQuestions" :key="index" class="bg-white rounded-lg shadow-sm p-6">
             <div class="flex items-start gap-2">
               <h3 class="text-lg font-medium mb-4">{{ question.title }}</h3>
-              <!-- <span class="text-gray-400">(选填)</span> -->
+              <span class="text-gray-400">(选填)</span>
               <span class="text-red-500">*</span>
             </div>
             
-            <!-- Rating -->
             <div class="mb-6">
-              <!-- <div class="flex justify-between text-sm text-gray-500 mb-2">
-                <span>非常不满意</span>
-                <span>非常满意</span>
-              </div> -->
+                
               <div class="flex flex-wrap gap-3">
                 <div 
                   v-for="n in 11" 
                   :key="n - 1"
                   class="flex justify-center items-center"
                 >
-                  <button 
-                  type="button"
-                  @click="setRating(question.id, n - 1)"
-                  :class="[
-                    'w-10 h-10 rounded-full text-sm font-medium transition-all duration-200',
-                    question.rating === n - 1
-                        ? 'bg-blue-500 text-white transform scale-110'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                ]">{{ n - 1 }}</button>
+                <button 
+                type="button"
+                @click="setRating(question.id, n - 1)"
+                :class="[
+                'w-10 h-10 rounded-full text-sm font-medium transition-all duration-200',
+                question.rating === n - 1
+                    ? 'bg-green-500 text-white transform scale-110'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            ]">{{ n - 1 }}</button>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
   
           <button
             type="submit"
             :disabled="isSubmitting"
-            class="w-full bg-blue-500 text-white py-4 rounded-lg font-medium hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 transition-all duration-200 disabled:opacity-50"
+            class="w-full bg-green-500 text-white py-4 rounded-lg font-medium hover:bg-green-600 focus:ring-4 focus:ring-blue-200 transition-all duration-200 disabled:opacity-50"
           >
             {{ isSubmitting ? '提交中...' : '提交评分' }}
           </button>
@@ -140,6 +136,8 @@ const title = route.params.title
 // 必填项数据
 const requiredQuestions = ref([
     { id: 1, title: '1. 企业评分', rating: null },
+    { id: 2, title: '2. 参与活动情况', rating: null },
+    { id: 3, title: '3. 其他加分项', rating: null },
 ])
 
 // 选填项数据

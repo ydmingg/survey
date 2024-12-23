@@ -28,8 +28,8 @@ export default defineConfig({
         outDir: "dist", // 输出目录
         minify: "esbuild", // 压缩代码
         rollupOptions: {
-            // input: {"survey": path.resolve(__dirname, 'index.html')},
-            input: {"survey": 'src/main.ts'}, // 只打包一个入口文件
+            input: {"survey": path.resolve(__dirname, 'index.html')},
+            // input: {"survey": 'src/main.ts'}, // 只打包一个入口文件
             output: {
                 entryFileNames: `[name]-${getVersion}.js`,
                 assetFileNames: getAssetFile,
