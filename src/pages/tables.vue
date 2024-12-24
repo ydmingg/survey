@@ -10,8 +10,21 @@
 					表彰2024年度优秀会员单位
 				</p>
 			</div>
-			<div
-				class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <div class="flex align-center justify-between mb-8">
+                <div class="flex align-center justify-center gap-4">
+                    <button 
+                        v-for="item in navData" 
+                        :key="item.id"
+                        @click="changeNav(item.id)"
+                        :class="{ 'bg-green-500 text-white': selectedNav === item.id }"
+                        class="px-3 h-9 border rounded disabled:opacity-50 text-xs">
+                        {{ item.label }}
+                    </button>
+                </div>
+                <button class="px-3 h-9 border rounded disabled:opacity-50 text-xs">导出数据</button>
+           
+            </div>
+			<div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
 				<div class="px-6 py-8">
 					<table class="w-full caption-bottom text-sm">
 						<thead class="bg-gray-50">
@@ -82,7 +95,7 @@
 
 <script setup>
 	import { ref, computed } from "vue";
-	import Pagination from "@/components/Pagination.vue";
+    import Pagination from "@/components/Pagination.vue";
 
     const currentPage = ref(1);
 	const perPage = ref(6); // 设置每页显示5条数据
@@ -101,6 +114,7 @@
         { id: "12", name: "David Brown", age: 35, email: "david@example.com" },
 	]);
 
+    
     // 计算总页数
 	const totalPages = computed(() => {
 		return Math.ceil(data.value.length / perPage.value);
@@ -116,5 +130,21 @@
     // 更新当前页
 	const updatePage = (page) => {
 		currentPage.value = page;
-	};
+    };
+
+    // 选择选项
+    const navData = [
+        { id: 1, label: '优秀设计' },
+        { id: 2, label: '优秀设计' },
+        { id: 3, label: '优秀设计' },
+        { id: 4, label: '优秀设计' },
+        { id: 5, label: '优秀设计' },
+        { id: 6, label: '优秀设计' }
+    ];
+    const selectedNav = ref(navData[0].id);
+    const changeNav = (navId) => {
+        selectedNav.value = navId;
+    };
+
+
 </script>
