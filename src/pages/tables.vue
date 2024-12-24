@@ -1,12 +1,12 @@
 <template>
-	<div class="min-h-screen bg-gradient-to-b from-white to-gray-50 px-4 py-16">
+	<div class="min-h-screen bg-gradient-to-b from-white to-gray-50 px-4 pt-20 pb-10">
 		<main class="mx-auto max-w-[1200px] min-w-[1024px] px-10">
 			<div class="mb-16 text-center">
 				<h1
 					class="mb-4 text-4xl xl:text-5xl xl:mb-6 font-bold tracking-tight text-gray-900">
 					深标协2024年度会员单位评选颁奖活动
 				</h1>
-				<p className="text-lg text-gray-600">
+				<p className="text-lg text-gray-500">
 					表彰2024年度优秀会员单位
 				</p>
 			</div>
